@@ -103,11 +103,19 @@ h1 {
 
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 300px;
-    margin: 20px auto;
+    grid-template-areas:
+        ". up ."
+        "left . right"
+        ". down .";
+    gap: 10px;
+    width: fit-content;
+    margin: 0 auto;
 }
+
+.btn-up { grid-area: up; }
+.btn-right { grid-area: right; }
+.btn-down { grid-area: down; }
+.btn-left { grid-area: left; }
 
 .number-btn {
     font-size: 24px;
